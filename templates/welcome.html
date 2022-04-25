@@ -1,0 +1,14 @@
+{% extends "not_logged_in.html" %}
+{% block content %}
+
+    <h1 class="display-1" id="title">GibJohn Tutoring</h1>
+        <br>
+            <div class="container">
+                <form action="{{ url_for('sign_up') }}" method="get" id="sign-up">
+                    <button type="submit" class="btn btn-lg" id="sign-up-button">Sign_up</button>
+                </form>
+                <form action="{{ url_for('login') }}" method="get" id="login">
+                    <button type="submit" class="btn btn-link btn-lg" id="login-button">Login</button>
+                </form>
+            </div>
+{% endblock %}

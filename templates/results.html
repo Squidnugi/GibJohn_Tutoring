@@ -1,0 +1,10 @@
+{% extends "broken_link.html" %}
+{% block content %}
+    <br>
+    <div class="container" id="start">
+        <form action="{{ url_for('home') }}" method="get">
+            <h1>{{ score }}%</h1>
+            <button type="submit" class="btn btn-link">Back to home</button>
+        </form>
+    </div>
+{% endblock %}

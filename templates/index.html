@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="container">{{ username }}</h1>
+    <div class="container" id="start">
+        <br>
+        <h2>Times Completed:</h2>
+        <ul class="list-group" id="left">
+            {% for i in subjects %}
+                <li class="list-group-item container">
+                    <h3>{{ i[0] }} {{ i[1] }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+        <br>
+        <h2>Times 100%</h2>
+        <ul class="list-group" id="middle">
+            {% for i in subs_comp %}
+                <li class="list-group-item container">
+                    <h3>{{ i[0] }} {{ i[1] }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+        <br>
+        <h2>XP leaderboard:</h2>
+        <ul class="list-group" id="right">
+            {% for i in users %}
+                <li class="list-group-item container">
+                    <h3>{{ i[0] }} {{ i[1] }}xp</h3>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

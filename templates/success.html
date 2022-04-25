@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <div class="container" id="start">
+    <h1>{{ msg }} {{ username }}</h1>
+    {% if msg == "Username or password incorrect" or msg == "error" %}
+        <h2><a href = "/login">Try Again</a></h2>
+    {% elif msg == "Error: Username or email might already exist or invalid data" %}
+        <h2><a href = "/sign_up">Try Again</a></h2>
+    {% else %}
+        <form action="{{ url_for('home') }}" method="post">
+            <button type="submit" class="btn btn-link">go to home page </button>
+        </form>
+    {% endif %}
+    </div>
+{% endblock %}

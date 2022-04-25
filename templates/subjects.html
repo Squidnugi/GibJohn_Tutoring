@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+    {# if you wish to add a subject you just copy an existing subject then eddit the names or if you wish to delete a subject delete the whole stection which are marked with a div #}
+    <br>
+    <div class="container" id="start">
+        <h1>Subjects</h1>
+        <p>All quizzes are 10 questions long, they are a mix of multiple choice and True or False, and mixed difficulty</p>
+        <br>
+        <div id ="geography">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#Geography">Geography</button>
+            <div id="Geography" class="collapse">
+            <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="Geography" name="subject">
+                    {% for i in Geography %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+        <br>
+        <div id="history">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#History">History</button>
+            <div id="History" class="collapse">
+                <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="History" name="subject">
+                    {% for i in History %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+        <br>
+        <div id="science">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#Science">Science</button>
+            <div id="Science" class="collapse">
+                <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="Science" name="subject">
+                    {% for i in Science %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+        <br>
+        <div id="computers">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#Computers">Computers</button>
+            <div id="Computers" class="collapse">
+                <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="Computers" name="subject">
+                    {% for i in Computers %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+        <br>
+        <div id="math">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#Math">Math</button>
+            <div id="Math" class="collapse">
+                <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="Math" name="subject">
+                    {% for i in Math %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+        <br>
+        <div id="sports">
+            <button type="button" class="btn btn-subject" data-bs-toggle="collapse" data-bs-target="#Sports">Sports</button>
+            <div id="Sports" class="collapse">
+                <form action="{{ url_for('quiz', id=0) }}" method="post">
+                <select class="form-select" id="Sports" name="subject">
+                    {% for i in Sports %}
+                        <option>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-subject mt-3">Submit</button>
+            </form>
+            </div>
+        </div>
+    <br>
+    </div>
+{% endblock %}

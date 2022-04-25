@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <div class="container" id="start">
+    <h1>Do you wish to sign out</h1>
+    <form action="{{ url_for('bye') }}" method="POST">
+        <button type="submit" class="btn btn-link">Yes</button>
+    </form>
+    <form action="{{ url_for('home') }}" method="get">
+        <button type="submit" class="btn btn-link">No</button>
+    </form>
+    </div>
+{% endblock %}
