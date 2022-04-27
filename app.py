@@ -5,6 +5,7 @@ import sqlite3
 import random
 from werkzeug.security import check_password_hash, generate_password_hash
 
+print("http://localhost:5000/")
 app = Flask(__name__)
 nav = Navigation(app)
 # checks server connection
@@ -345,14 +346,6 @@ def triv_api(subject):
     return final
 
 
-# outputs result
-@app.route('/results')
-def results():
-    # if not out of 10 this will not output a satisfying output
-    correct = 9  ##
-    correct *= 10  ##
-    return render_template('results.html', score=correct)
-
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="localhost", port=5000, debug=True)
